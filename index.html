@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Wayne - 小程序 & 网站开发者，热爱解决问题。个人作品集与技能展示。">
+  <meta name="keywords" content="Wayne, 小程序开发, 网站开发, Python, JavaScript, AI开发">
+  <meta name="author" content="Wayne">
+  <meta name="theme-color" content="#4A90D9">
+  <title>Wayne | 小程序 & 网站开发者</title>
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress"></div>
+
+  <!-- Particle Background -->
+  <canvas id="particleCanvas"></canvas>
+
+  <!-- Gradient Orbs -->
+  <div class="gradient-orbs">
+    <div class="orb"></div>
+    <div class="orb"></div>
+    <div class="orb"></div>
+  </div>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-overlay"></div>
+
+  <!-- ========== Navigation ========== -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo"><span>Wayne</span></a>
+
+      <ul class="nav-links">
+        <li><a href="#home" class="active">首页</a></li>
+        <li><a href="#about">关于</a></li>
+        <li><a href="#skills">技能</a></li>
+        <li><a href="#projects">项目</a></li>
+        <li><a href="#contact">联系</a></li>
+        <li>
+          <button class="theme-toggle" aria-label="切换主题" title="切换白天/黑夜模式 (快捷键: T)">
+            <span class="icon-sun">☀️</span>
+            <span class="icon-moon">🌙</span>
+          </button>
+        </li>
+      </ul>
+
+      <button class="hamburger" aria-label="菜单">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ========== Hero Section ========== -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="dot"></span> 远程可工作 · 开放合作
+      </div>
+
+      <h1 class="hero-name">
+        你好，我是<br><span class="highlight">Wayne</span>
+      </h1>
+
+      <div class="hero-typed">
+        <span id="typed-text"></span><span class="cursor"></span>
+      </div>
+
+      <p class="hero-desc">
+        专注于小程序与网站开发，热爱学习新技术，擅长将复杂问题转化为简洁实用的解决方案。
+        相信技术的力量在于解决问题、创造价值。
+      </p>
+
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">
+          🚀 查看我的作品
+        </a>
+        <a href="#contact" class="btn btn-outline">
+          💬 联系我
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-scroll-indicator">
+      <div class="mouse"></div>
+      <span>向下滚动</span>
+    </div>
+  </section>
+
+  <!-- ========== About Section ========== -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title reveal">关于我</h2>
+      <p class="section-subtitle reveal reveal-delay-1">一段代码，一份热爱，一颗不断学习的心</p>
+
+      <div class="about-grid reveal reveal-delay-2">
+        <div class="about-text">
+          <p>
+            我是一名自学编程的开发者，专注于<strong>小程序</strong>和<strong>网站开发</strong>领域。
+            从最初一行行啃代码开始，到能够独立完成完整项目，每一步都源于对技术的热爱和对问题的执着。
+          </p>
+          <p>
+            我相信编程的魅力不仅在于写出优雅的代码，更在于用技术解决真实世界的问题。
+            目前正在深入学习 <strong>AI 应用开发</strong>，探索将人工智能与小程序、网站深度结合的可能性。
+          </p>
+
+          <div class="about-badges">
+            <div class="badge">
+              <span class="badge-icon">💻</span> 远程可工作
+            </div>
+            <div class="badge">
+              <span class="badge-icon">📚</span> 持续学习中
+            </div>
+            <div class="badge">
+              <span class="badge-icon">🤝</span> 开放合作
+            </div>
+            <div class="badge">
+              <span class="badge-icon">🎯</span> 专注解决问题
+            </div>
+          </div>
+        </div>
+
+        <div class="about-motto">
+          <div class="quote-icon">❝</div>
+          <p class="motto-text">更热爱解决问题</p>
+          <p class="motto-author">—— 我的座右铭</p>
+        </div>
+      </div>
+
+      <!-- Stats -->
+      <div class="about-stats reveal reveal-delay-3">
+        <div class="stat-card">
+          <span class="stat-number" data-target="2">0+</span>
+          <span class="stat-label">掌握语言</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number" data-target="2">0+</span>
+          <span class="stat-label">核心方向</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number" data-target="1">0+</span>
+          <span class="stat-label">正在探索</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== Skills Section ========== -->
+  <section id="skills" class="section">
+    <div class="container">
+      <h2 class="section-title reveal">技能工具箱</h2>
+      <p class="section-subtitle reveal reveal-delay-1">持续打磨，不断拓展技术边界</p>
+
+      <!-- Skill Wheel -->
+      <div class="skill-wheel-container reveal reveal-delay-2">
+        <div class="skill-wheel" id="skillWheel">
+          <!-- Center Hub -->
+          <div class="wheel-hub">
+            <div class="hub-icon">⚙️</div>
+            <div class="hub-label">技能工具箱</div>
+            <div class="hub-info" id="hubInfo">
+              <span class="hub-skill-name"></span>
+              <span class="hub-skill-level"></span>
+              <span class="hub-skill-stars"></span>
+            </div>
+          </div>
+
+          <!-- Single Ring with 7 Skills -->
+          <div class="wheel-ring">
+            <div class="wheel-node node-pos-0" data-name="Python" data-level="80%" data-stars="★★★★☆" data-icon="🐍">
+              <div class="node-dot"></div>
+              <span class="node-label">Python</span>
+            </div>
+            <div class="wheel-node node-pos-1" data-name="JavaScript" data-level="75%" data-stars="★★★★☆" data-icon="📜">
+              <div class="node-dot"></div>
+              <span class="node-label">JavaScript</span>
+            </div>
+            <div class="wheel-node node-pos-2" data-name="小程序开发" data-level="75%" data-stars="★★★★☆" data-icon="📱">
+              <div class="node-dot"></div>
+              <span class="node-label">小程序</span>
+            </div>
+            <div class="wheel-node node-pos-3" data-name="网站开发" data-level="80%" data-stars="★★★★☆" data-icon="🌐">
+              <div class="node-dot"></div>
+              <span class="node-label">网站开发</span>
+            </div>
+            <div class="wheel-node node-pos-4" data-name="HTML5 & CSS3" data-level="82%" data-stars="★★★★☆" data-icon="🎨">
+              <div class="node-dot"></div>
+              <span class="node-label">HTML/CSS</span>
+            </div>
+            <div class="wheel-node node-pos-5" data-name="Git & GitHub" data-level="70%" data-stars="★★★★☆" data-icon="🔧">
+              <div class="node-dot"></div>
+              <span class="node-label">Git</span>
+            </div>
+            <div class="wheel-node learning node-pos-6" data-name="AI 应用开发" data-level="学习中" data-stars="★★☆☆☆" data-icon="🤖">
+              <div class="node-dot"></div>
+              <span class="node-label">AI 开发</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== Projects Section ========== -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2 class="section-title reveal">项目作品</h2>
+      <p class="section-subtitle reveal reveal-delay-1">这里将记录我的每一个脚印，精彩即将呈现</p>
+
+      <div class="projects-grid">
+        <!-- Project Card 1 -->
+        <div class="project-card reveal reveal-delay-1">
+          <div class="project-image">
+            <span class="placeholder-icon">🚀</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">项目即将到来</h3>
+            <p class="project-desc">正在构思一个有趣的项目，它将展示我的技术能力和解决问题的思路。敬请期待！</p>
+            <div class="project-tags">
+              <span class="project-tag">Coming Soon</span>
+            </div>
+            <div class="project-links">
+              <button class="btn btn-sm btn-outline" disabled>🔗 在线演示</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card 2 -->
+        <div class="project-card reveal reveal-delay-2">
+          <div class="project-image">
+            <span class="placeholder-icon">💡</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">灵感孵化中</h3>
+            <p class="project-desc">下一个项目可能是一个实用的小程序，或者一个有趣的网站工具。灵感正在酝酿中。</p>
+            <div class="project-tags">
+              <span class="project-tag">Coming Soon</span>
+            </div>
+            <div class="project-links">
+              <button class="btn btn-sm btn-outline" disabled>🔗 在线演示</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card 3 -->
+        <div class="project-card reveal reveal-delay-3">
+          <div class="project-image">
+            <span class="placeholder-icon">🛠️</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">创意构思中</h3>
+            <p class="project-desc">在日常生活和工作中发现的问题，就是最好的项目灵感来源。正在寻找那个值得解决的痛点。</p>
+            <div class="project-tags">
+              <span class="project-tag">Coming Soon</span>
+            </div>
+            <div class="project-links">
+              <button class="btn btn-sm btn-outline" disabled>🔗 在线演示</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card 4 -->
+        <div class="project-card reveal reveal-delay-4">
+          <div class="project-image">
+            <span class="placeholder-icon">🌟</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">你的项目在这里</h3>
+            <p class="project-desc">有一个想法？让我们一起把它变成现实。欢迎联系我讨论合作机会！</p>
+            <div class="project-tags">
+              <span class="project-tag">Open for Ideas</span>
+            </div>
+            <div class="project-links">
+              <button class="btn btn-sm btn-outline" disabled>🔗 在线演示</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== Contact Section ========== -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2 class="section-title reveal">联系我</h2>
+      <p class="section-subtitle reveal reveal-delay-1">有任何问题或合作意向，欢迎随时联系</p>
+
+      <div class="contact-grid reveal reveal-delay-2">
+        <!-- Contact Methods -->
+        <div class="contact-info">
+          <!-- Email -->
+          <div class="contact-item">
+            <div class="contact-icon">📧</div>
+            <div class="contact-detail">
+              <div class="contact-label">邮箱</div>
+              <div class="contact-value">3405519221@qq.com</div>
+            </div>
+            <div class="contact-action">
+              <button id="copy-email" class="btn btn-sm btn-outline" title="复制邮箱地址">
+                📋 复制
+              </button>
+            </div>
+          </div>
+
+          <!-- WeChat -->
+          <div class="contact-item">
+            <div class="contact-icon">💬</div>
+            <div class="contact-detail">
+              <div class="contact-label">微信</div>
+              <div class="contact-value">扫码添加好友</div>
+            </div>
+            <div class="contact-action">
+              <button id="btn-wechat" class="btn btn-sm btn-outline" title="查看微信二维码">
+                📱 查看
+              </button>
+            </div>
+          </div>
+
+          <!-- Feishu -->
+          <div class="contact-item">
+            <div class="contact-icon">🕊️</div>
+            <div class="contact-detail">
+              <div class="contact-label">飞书</div>
+              <div class="contact-value">扫码添加好友</div>
+            </div>
+            <div class="contact-action">
+              <button id="btn-feishu" class="btn btn-sm btn-outline" title="查看飞书二维码">
+                📱 查看
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Social Links -->
+        <div class="contact-social">
+          <a href="#" class="social-link placeholder" title="GitHub - 即将上线">
+            <span class="social-icon">🐙</span>
+            <span class="social-label">GitHub</span>
+          </a>
+          <a href="#" class="social-link placeholder" title="Gitee - 即将上线">
+            <span class="social-icon">🔰</span>
+            <span class="social-label">Gitee</span>
+          </a>
+          <a href="#" class="social-link placeholder" title="掘金 - 即将上线">
+            <span class="social-icon">💎</span>
+            <span class="social-label">掘金</span>
+          </a>
+          <a href="#" class="social-link placeholder" title="Twitter - 即将上线">
+            <span class="social-icon">🐦</span>
+            <span class="social-label">Twitter</span>
+          </a>
+          <a href="#" class="social-link placeholder" title="知乎 - 即将上线">
+            <span class="social-icon">📖</span>
+            <span class="social-label">知乎</span>
+          </a>
+          <a href="#" class="social-link placeholder" title="更多 - 即将上线">
+            <span class="social-icon">➕</span>
+            <span class="social-label">更多</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== Footer ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-future reveal">
+        <div class="future-icon">🚧</div>
+        <p class="future-text">更多精彩内容即将推出，敬请期待...</p>
+        <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 0.5rem;">
+          博客文章 · 项目案例 · 技术分享
+        </p>
+      </div>
+
+      <p class="footer-copy">
+        © 2026 <a href="#">Wayne</a>. Made with ❤️ and lots of ☕. 保留所有权利。
+      </p>
+    </div>
+  </footer>
+
+  <!-- ========== Back to Top Button ========== -->
+  <button class="back-to-top" aria-label="回到顶部" title="回到顶部">↑</button>
+
+  <!-- ========== QR Code Modal ========== -->
+  <div class="modal-overlay">
+    <div class="modal">
+      <h3 class="modal-title">微信添加好友</h3>
+      <div class="modal-qr">
+        <img id="modal-qr-img" src="photo/微信添加码.png" alt="二维码">
+      </div>
+      <p class="modal-hint">请使用对应 App 扫描二维码添加好友</p>
+      <button class="modal-close">关闭</button>
+    </div>
+  </div>
+
+  <!-- ========== Toast Notification ========== -->
+  <div class="toast">
+    <span id="toast-msg">已复制！</span>
+  </div>
+
+  <!-- ========== Scripts ========== -->
+  <script src="js/main.js"></script>
+</body>
+</html>
